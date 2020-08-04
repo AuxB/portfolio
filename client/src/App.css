@@ -2,11 +2,8 @@ body{
   background: #373a47;
 }
 
-.App h1{
-
-}
-
-.App .window-wrapper{
+#page-wrap {
+  margin-left: 249px;
 }
 
 .App .top-blank{

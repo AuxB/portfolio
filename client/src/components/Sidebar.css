@@ -120,7 +120,7 @@
   position: relative;
   font-family: 'Ubuntu', sans-serif;
   color: #fff;
-  background: #373a47;
+  background: rgb(21, 23, 39);
   border-right: 1px solid #fff;
   font-size: 1.15em;
   overflow-y: hidden;
@@ -137,11 +137,6 @@
 .bm-item-list {
   overflow: hidden;
 }
-
-/* Individual item */
-
-.bm-item {}
-
 /* Styling of overlay */
 
 .bm-overlay {
