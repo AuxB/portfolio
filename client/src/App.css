@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
 body{
-  background: #373a47;
+  background: rgb(21, 23, 39);
 }
 
 #page-wrap {
@@ -9,4 +17,13 @@ body{
 .App .top-blank{
   height: 300px;
   background: rgb(255, 255, 255);
+}
+
+.App hr{
+  border: 1px solid var(--red);
+}
+
+:root {
+  --red: rgb(168, 38, 38);
+  --blue: rgb(21, 23, 39);
 }

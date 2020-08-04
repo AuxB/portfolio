@@ -1,4 +1,5 @@
 import React from 'react';
+import About from './components/About'
 import Sidebar from './components/Sidebar';
 
 import './App.css';
@@ -8,11 +9,8 @@ function App() {
     <div id="outer-container" className="App">
       <Sidebar />
       <main id="page-wrap">
-        <div className="window-wrapper">
-          <div className="top-blank">
-            <h1>Auxence Blondel</h1>
-          </div>
-        </div>
+        <About />
+        <hr />
       </main>
     </div>
   );

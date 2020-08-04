@@ -11,7 +11,7 @@ import inLogo from '../img/linkedin.svg';
 import googleLogo from '../img/google.svg';
 import gitLogo from '../img/github.svg';
 
-const Sidebar = () => {
+function Sidebar() {
   const [isMobile, setMobile] = useState(true);
 
   useEffect(() => {
