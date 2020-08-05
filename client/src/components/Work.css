@@ -1,0 +1,7 @@
+.Work {
+    display: grid;
+    grid-gap: 1.5em;
+    width: 80%;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    /* grid-template-rows: repeat(1, 250px); */
+}

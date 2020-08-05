@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './components/About'
 import Sidebar from './components/Sidebar';
+import Work from './components/Work'
 
 import './App.css';
 
@@ -11,6 +12,7 @@ function App() {
       <main id="page-wrap">
         <About />
         <hr />
+        <Work />
       </main>
     </div>
   );

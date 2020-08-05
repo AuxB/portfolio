@@ -4,7 +4,7 @@ import './About.css';
 
 function About() {
   return (
-    <div className="About">
+    <div className="About wrap-center">
       <div>
         <h1>Auxence <span>Blondel</span></h1>
         <h2>Développeur Fullstack Js | React.Js | Node.Js</h2>

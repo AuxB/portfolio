@@ -31,7 +31,7 @@ function Sidebar() {
 
   return (
     <div>
-      <Menu elastic disableOverlayClick={isMobile} width="250px" isOpen={isMobile} className="Navbar" disableAutoFocus>
+      <Menu elastic disableOverlayClick width="250px" isOpen={isMobile} className="Navbar" disableAutoFocus>
         <img className="profil" src={profil} alt="profil" />
         <ul>
           <li>
