@@ -25,3 +25,5 @@ yarn-error.log*
 
 # lint
 .eslintrc.json
+
+.env
