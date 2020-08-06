@@ -33,6 +33,10 @@ router.get('/', (req, res) => {
       return elt;
     })
       .filter((work, key) => !idToDelete.includes(key));
+    res.set({
+      'X-Total-Count': '100',
+      'Access-Control-Expose-Headers': 'X-Total-Count'
+    })
     return res.status(200).json(works);
   });
 });
