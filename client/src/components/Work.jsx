@@ -1,50 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import WorkCard from './WorkCard';
 
-import './Work.css'
+import './Work.css';
 
-const works = [
-  {
-    name: 'Projet1',
-    description: 'Premier travail réalisé a la Wild code School pour le client Cabreta, simple projet réalisé en HTML CSS Javascript',
-    urlGit: 'http://github.com',
-    url: 'https://www.google.com/',
-    screenshot: '/images/thumbs/pokefight-screenshot.png',
-    languages: ['react', 'nodejs', 'js'],
-  },
-  {
-    name: 'Projet1',
-    description: 'Premier travail réalisé a la Wild code School pour le client Cabreta, simple projet réalisé en HTML CSS Javascript',
-    urlGit: 'http://github.com',
-    url: 'https://www.google.com/',
-    screenshot: '/images/thumbs/pokefight-screenshot.png',
-    languages: ['react', 'nodejs'],
-  },
-  {
-    name: 'Projet1',
-    description: 'Premier travail réalisé a la Wild code School pour le client Cabreta, simple projet réalisé en HTML CSS Javascript',
-    urlGit: 'http://github.com',
-    url: '',
-    screenshot: '/images/thumbs/pokefight-screenshot.png',
-    languages: ['react', 'nodejs'],
-  },
-  {
-    name: 'Projet1',
-    description: 'Premier travail réalisé a la Wild code School pour le client Cabreta, simple projet réalisé en HTML CSS Javascript',
-    urlGit: 'http://github.com',
-    url: '',
-    screenshot: '/images/thumbs/pokefight-screenshot.png',
-    languages: ['react', 'nodejs'],
-  },
-];
-
+const backUrl = process.env.REACT_APP_API_URL;
 function Work() {
+  const [works, setWorks] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_API_URL}/works`)
+      .then((res) => setWorks(res.data));
+  }, []);
+
   return (
     <div className="Work wrap-center">
-      {works.map(work => {
-        return (
-          <WorkCard work={work}/>)
-      })}
+      {works.map((work) => (
+        <WorkCard work={work} />))}
     </div>
   );
 }
