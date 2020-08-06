@@ -10,11 +10,12 @@ export function WorkList(props) {
     <List {...props}>
       {isSmall ? (
         <SimpleList
-          primaryText={record => record.title}
-          secondaryText={record => `${record.views} views`}
-          tertiaryText={record => new Date(record.published_at).toLocaleDateString()}
+          primaryText={(record) => record.name}
+          secondaryText={(record) => record.description}
+          tertiaryText={(record) => record.url}
         />
-      ) : (
+      )
+        : (
           <Datagrid rowClick="edit">
             <TextField source="id" />
             <TextField source="name" />

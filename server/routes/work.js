@@ -51,7 +51,6 @@ router.get('/:id', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  console.log('COUCOU')
   connection.query('UPDATE work SET ? WHERE work.id = ?', [req.body, req.params.id], (err, results) => {
     if (err) {
       return res.status(500).send(`Error to update work data : ${err}`);

@@ -21,13 +21,13 @@ function Sidebar() {
     if (window.innerWidth > 920) {
       setMobile(true);
       closeButton.style.display = 'none';
-      overlay.style.background = 'rgba(0, 0, 0, 0)';
+      overlay.style.position = 'relative';
     } else {
       setMobile(false);
       closeButton.style.display = 'block';
-      overlay.style.background = 'rgba(0, 0, 0, 0.3)';
+      // overlay.style.position = 'relative !important';
     }
-  });
+  }, [window.innerWidth]);
 
   return (
     <div>

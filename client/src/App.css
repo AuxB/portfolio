@@ -8,7 +8,7 @@ body{
   background: var(--blue);
 }
 
-#page-wrap {
+.page-wrap {
   margin-left: 249px;
 }
 
@@ -23,7 +23,7 @@ body{
 
 .wrap-center{
   margin: auto;
-  width: 90%;
+  width: 95%;
   padding-top: 10rem;
   padding-bottom: 5rem;
 }
@@ -32,4 +32,10 @@ body{
   --red: rgb(168, 38, 38);
   --blue: rgb(19, 28, 44);
   --white: #fff;
+}
+
+@media screen and (max-width: 920px){
+  .page-wrap {
+    margin-left: 0px;
+  }
 }

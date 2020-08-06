@@ -79,6 +79,9 @@
   left: 36px;
   top: 36px;
 }
+.bm-burger-button button {
+  background-color: #fff none repeat scroll 0% 0% !important;
+}
 
 /* Color/shape of burger icon bars on hover*/
 
@@ -134,6 +137,6 @@
 /* Styling of overlay */
 
 .bm-overlay {
-  position: relative !important;
-  background: rgba(0, 0, 0, 0.3);
+  /* position: fixed !important; */
+  background: rgba(0, 0, 0, 0.8);
 }

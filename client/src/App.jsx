@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import BackOffice from './components/BackOffice';
 import About from './components/About';
+import BackOffice from './components/BackOffice';
+import ExpTimeline from './components/ExpTimeline';
 import Sidebar from './components/Sidebar';
 import Work from './components/Work';
 
@@ -15,10 +16,12 @@ function App() {
         <Route exact path="/">
           <div id="outer-container" className="App">
             <Sidebar />
-            <main id="page-wrap">
+            <main className="page-wrap">
               <About />
               <hr />
               <Work />
+              <hr />
+              <ExpTimeline />
             </main>
           </div>
         </Route>
