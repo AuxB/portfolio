@@ -1,17 +1,14 @@
 import * as React from 'react';
 import {
-  List, Datagrid, TextField, ReferenceField,
+  List, Datagrid, TextField,
 } from 'react-admin';
 
 function LangsList(props) {
   return (
     <List {...props}>
       <Datagrid rowClick="edit">
-        <ReferenceField source="id" reference="languages">
-          <TextField source="name" />
-        </ReferenceField>
         <TextField source="id" />
-        <TextField source="name" />
+        <TextField source="language_name" />
       </Datagrid>
     </List>
   );

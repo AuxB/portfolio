@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/works', routes.work);
+app.use('/languages', routes.languages);
 
 app.listen(process.env.PORT, (err) => {
   if (err) {
