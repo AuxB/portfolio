@@ -6,6 +6,9 @@
     text-align: right;
 }
 
+.About{
+    background: url('/client/public/images/about-bg.png');
+}
 .About h1 {
     /* margin-top: 10rem; */
     margin-bottom: 1rem;

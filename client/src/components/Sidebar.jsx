@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { push as Menu } from 'react-burger-menu';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import './Sidebar.css';
 
@@ -35,22 +36,22 @@ function Sidebar() {
         <img className="profil" src={profil} alt="profil" />
         <ul>
           <li>
-            <a href="localhost">A propos</a>
+            <Link to="#about"><a href="localhost">A propos</a></Link>
             <img src={aboutLogo} alt="about logo" />
           </li>
           <li>
-            <a href="localhost">Travaux</a>
+            <Link to="#work"><a href="localhost">Travaux</a></Link>
             <img src={workLogo} alt="work logo" />
           </li>
           <li>
-            <a href="localhost">Expériences</a>
+            <Link to="#exp"><a href="localhost">Experiences</a></Link>
             <img src={portfolioLogo} alt="portfolio logo" />
           </li>
         </ul>
         <div className="networkLogo">
-          <a href="localhost"><img src={inLogo} alt="linkedin logo" /></a>
-          <a href="localhost"><img src={googleLogo} alt="google logo" /></a>
-          <a href="localhost"><img src={gitLogo} alt="github logo" /></a>
+          <a href="https://www.linkedin.com/in/auxenceblondel/" target="__blank"><img src={inLogo} alt="linkedin logo" /></a>
+          <a href="/"><img src={googleLogo} alt="google logo" target="__blank" /></a>
+          <a href="https://github.com/AuxB?tab=repositories" target="__blank"><img src={gitLogo} alt="github logo" /></a>
         </div>
       </Menu>
     </div>

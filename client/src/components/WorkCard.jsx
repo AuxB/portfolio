@@ -17,10 +17,10 @@ function WorkCard(props) {
         <h3>{work.name}</h3>
         <p>{work.description}</p>
       </div>
-      <div className="view-section">
-        {work.url ? <button><a href="#">Voir</a></button> : <button disabled><a>Voir</a></button>}
+      <button type="button" className={work.url ? 'view-button' : 'view-button view-disabled'}><a href={work.url} target="_blank">Voir</a></button>
+      <a className="github-button" href={work.urlGit} target='_blank'>
         <img src={githubLogo} alt="github logo" />
-      </div>
+      </a>
     </div>
   );
 }

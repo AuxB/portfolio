@@ -9,7 +9,7 @@ function Icon(props) {
 
 function ExpTimeline() {
   return (
-    <div className="ExpTimeline">
+    <div id="exp" className="ExpTimeline">
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"

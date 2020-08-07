@@ -2,6 +2,7 @@ const express = require('express');
 const connection = require('../conf');
 
 const router = express.Router();
+const wichLangNum = require('../services/wichLangNum');
 
 router.get('/', (req, res) => {
   const sql = `
@@ -58,24 +59,6 @@ router.put('/:id', (req, res) => {
     return res.status(200).json({ data: results.body });
   });
 });
-
-function wichLangNum(languageName) {
-  let langNumber = 0;
-  switch (languageName) {
-    case 'react':
-      langNumber = 1;
-      break;
-    case 'nodejs':
-      langNumber = 2;
-      break;
-    case 'js':
-      langNumber = 3;
-      break;
-    default:
-      break;
-  }
-  return langNumber;
-}
 
 router.post('/', (req, res) => {
   const langNumbers = [];

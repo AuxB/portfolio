@@ -15,7 +15,7 @@ function Work() {
   }, []);
 
   return (
-    <div className="Work wrap-center">
+    <div id="work" className="Work wrap-center">
       {works.map((work) => (
         <WorkCard work={work} />))}
     </div>
