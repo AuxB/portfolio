@@ -62,29 +62,30 @@ router.put('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const langNumbers = [];
-  const languages = [];
+  const { languages } = req.body;
+  delete req.body.languages;
   // eslint-disable-next-line no-restricted-syntax
-  for (const property in req.body) {
-    if (property.startsWith('language')) {
-      languages.push(req.body[property]);
-      delete req.body[property];
-    }
-  }
+  // for (const property in req.body) {
+  //   if (property.startsWith('language')) {
+  //     languages.push(req.body[property]);
+  //     delete req.body[property];
+  //   }
+  // }
   languages.map((lang) => langNumbers.push(wichLangNum(lang)));
   const workData = req.body;
   connection.query('INSERT INTO work SET ?', [workData], (err, results) => {
     if (err) {
       return res.status(500).send(`Error to post work data : ${err}`);
     }
-
     const sqlValues = [];
     langNumbers.map((languageId) => sqlValues.push([results.insertId, languageId]));
-    connection.query('INSERT INTO work_language VALUES ?', [sqlValues], (err2, results2) => {
+    connection.query('INSERT INTO work_language VALUES ?', [sqlValues], (err2) => {
       if (err2) {
         return res.status(500).send(`Error to post work data : ${err2}`);
       }
       return res.json({ data: results.body, id: results.insertId });
     });
+    return '';
   });
 });
 

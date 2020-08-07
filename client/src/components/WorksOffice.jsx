@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useMediaQuery } from '@material-ui/core';
 import {
-  List, Datagrid, TextField, TextInput, Create, SimpleForm,
+  List, Datagrid, TextField, TextInput, Create, SimpleForm, SelectArrayInput,
   SimpleList, Edit, UrlField, EditButton, ImageInput, ImageField,
 } from 'react-admin';
 
@@ -57,9 +57,14 @@ export function WorkCreate(props) {
         <TextInput source="url" />
         <TextInput source="urlGit" required />
         <TextInput source="thumb" required />
-        <TextInput source="language_1" required />
-        <TextInput source="language_2" />
-        <TextInput source="language_3" />
+        <SelectArrayInput
+          label="Languages" source="languages" choices={[
+            { id: 'react', name: 'react' },
+            { id: 'nodejs', name: 'nodejs' },
+            { id: 'html', name: 'html' },
+            { id: 'css', name: 'css' },
+            { id: 'mysql', name: 'mysql' },
+          ]} />
       </SimpleForm>
     </Create>
   );

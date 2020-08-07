@@ -27,7 +27,7 @@ function WorkCard(props) {
 }
 
 WorkCard.defaultProps = {
-  work: PropTypes.shape.isRequired({
+  work: PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     urlGit: PropTypes.string.isRequired,
