@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import './ExpTimeline.css';
 
 function Icon(props) {
-  return <img className="exp-icon" src={props.url} alt="icon" />;
+  const { url } = props;
+  return <img className="exp-icon" src={url} alt="icon" />;
 }
+
+Icon.defaultProps = {
+  url: PropTypes.string.isRequired,
+};
 
 function ExpTimeline() {
   return (
@@ -21,7 +27,7 @@ function ExpTimeline() {
           <h3 className="vertical-timeline-element-title">Wild Code School</h3>
           <h4 className="vertical-timeline-element-subtitle">Paris - 75005</h4>
           <p>
-            Durant les 5 mois de formation, l'apprentissage se base sur le développement
+            Durant les 5 mois de formation, l&apos;apprentissage se base sur le développement
             de sites internet interactifs qui utilisent les technologies HTML, CSS,
             Javascript, et vous allez mener à bien un projet de développement web
             en utilisant React/Node JS ou PHP/Symfony ou Java/JEE. Vous allez petit

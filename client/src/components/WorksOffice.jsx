@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useMediaQuery, TextareaAutosize } from '@material-ui/core';
+import { useMediaQuery } from '@material-ui/core';
 import {
   List, Datagrid, TextField, TextInput, Create, SimpleForm,
   SimpleList, Edit, UrlField, EditButton, ImageInput, ImageField,
@@ -53,11 +53,11 @@ export function WorkCreate(props) {
     <Create {...props}>
       <SimpleForm>
         <TextInput source="name" required />
-        <TextInput multiline source="description" required/>
+        <TextInput multiline source="description" required />
         <TextInput source="url" />
-        <TextInput source="urlGit" required/>
-        <TextInput source="thumb" required/>
-        <TextInput source="language_1" required/>
+        <TextInput source="urlGit" required />
+        <TextInput source="thumb" required />
+        <TextInput source="language_1" required />
         <TextInput source="language_2" />
         <TextInput source="language_3" />
       </SimpleForm>

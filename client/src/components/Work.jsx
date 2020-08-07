@@ -10,7 +10,7 @@ function Work() {
   const [works, setWorks] = useState([]);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/works`)
+    axios.get(`${backUrl}/works`)
       .then((res) => setWorks(res.data));
   }, []);
 

@@ -56,6 +56,6 @@ function Sidebar() {
       </Menu>
     </div>
   );
-};
+}
 
 export default Sidebar;
